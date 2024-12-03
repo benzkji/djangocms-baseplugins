@@ -12,6 +12,11 @@
 - templates with more fine grained blocks: plugin_content, plugin_content_inner, plugin_children
 - many more things I forgot
 
+==== 0.6.1 (2024-12-03) ===
+
+- optimize baseplugin form mixin
+
+
 ==== 0.6.0 (2024-11-13) ===
 
 - add migrations for cmsplugin_ptr
