@@ -10,7 +10,7 @@ from djangocms_baseplugins.baseplugin.utils import (
 )
 
 # basics
-NAME = _("Image")
+NAME = _("Gallery")
 MODULE = defaults.CONTENT_LABEL
 
 # parent / children
