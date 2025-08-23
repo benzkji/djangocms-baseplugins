@@ -1,3 +1,5 @@
+from json import JSONDecodeError
+
 import requests
 from django.db import models
 
@@ -35,4 +37,7 @@ class Soundcloud(AbstractBasePlugin):
             "maxheight": "166",
         }
         response = requests.get(url, params=params)
-        return response.json()
+        try:
+            return response.json()
+        except JSONDecodeError:
+            return {}
