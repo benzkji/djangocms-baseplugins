@@ -1,0 +1,9 @@
+{% extends "djangocms_baseplugins/baseplugin.html" %}
+{% load cms_tags %}
+
+
+{% block plugin_inner_content %}
+    {% with audioembed_info=object.get_oembed %}
+        {{ audioembed_info.html|safe }}
+    {% endwith %}
+{% endblock %}
