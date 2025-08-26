@@ -1,4 +1,5 @@
 """Settings that need to be set in order to run the tests."""
+
 import logging
 import os
 
@@ -139,6 +140,7 @@ EXTERNAL_APPS = (
 INTERNAL_APPS = (
     "test_app",
     # 'djangocms_baseplugins',
+    "djangocms_baseplugins.audioembed",
     "djangocms_baseplugins.baseplugin",
     "djangocms_baseplugins.text",
     "djangocms_baseplugins.image",

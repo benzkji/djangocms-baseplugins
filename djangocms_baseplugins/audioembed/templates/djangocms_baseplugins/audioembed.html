@@ -3,7 +3,8 @@
 
 
 {% block plugin_inner_content %}
-    {% with audioembed_info=object.get_oembed %}
-        {{ audioembed_info.html|safe }}
-    {% endwith %}
+
+    {% if object.oembed_info %}
+        {{ object.oembed_info.html|safe }}
+    {% endif %}
 {% endblock %}

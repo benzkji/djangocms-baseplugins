@@ -10,7 +10,7 @@ from djangocms_baseplugins.baseplugin.utils import (
 )
 
 # basics
-NAME = _("AudioEmbed Embed")
+NAME = _("Audio")
 MODULE = defaults.SPECIAL_LABEL
 
 # parent / children
@@ -22,6 +22,7 @@ REQUIRE_PARENT = False
 TRANSLATED_FIELDS = []
 CONTENT_FIELDS = [
     "audioembed_url",
+    # "oembed_info",
 ]
 DESIGN_FIELDS = []
 ADVANCED_FIELDS = defaults.ADVANCED_FIELDS
