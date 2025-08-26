@@ -18,8 +18,8 @@ dependencies = [
 [tool.setuptools]
 include-package-data = true
 
-[tool.setuptools.packages]
-find = {}  # Scan the project directory with the default parameters
+[tool.setuptools.packages.find]
+include = ["djangocms_baseplugins*"]
 
 [tool.setuptools_scm]
 # can be empty if no extra settings are needed, presence enables setuptools-scm
