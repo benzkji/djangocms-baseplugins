@@ -42,9 +42,11 @@ class AudioEmbedModelMixin(object):
             params = {
                 "url": self.audioembed_url,
             }
-        response = requests.get(url, params)
-        if response.status_code == 200:
-            self.oembed_info = response.json()
+        if url:
+            response = requests.get(url, params)
+            if response.status_code == 200:
+                self.oembed_info = response.json()
+        return {}
 
 
 class AudioEmbed(AudioEmbedModelMixin, AbstractBasePlugin):
