@@ -77,7 +77,7 @@ CUSTOM_CHOICES = (
 
 
 # check for django settings that override!
-check_settings("SOUNDCLOUDPLUGIN", sys.modules[__name__], settings)
+check_settings("AUDIOEMBEDPLUGIN", sys.modules[__name__], settings)
 
 # define fieldsets! important: AFTER check_settings!
 FIELDSETS = get_baseplugin_fieldset(

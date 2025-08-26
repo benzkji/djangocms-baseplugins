@@ -25,6 +25,7 @@ class AudioEmbedModelMixin(object):
         super().save()
 
     def populate_oembed_infos(self):
+        url = None
         if "soundcloud.com/" in self.audioembed_url:
             url = "https://soundcloud.com/oembed"
             params = {

@@ -13,5 +13,5 @@ class AudioEmbedPluginTests(BasePluginTestCase, TestCase):
 
     def get_plugin_default_data(self):
         return {
-            "audioembed_url": "https://audioembed.com/grappainc/sinatras-movenr137?",
+            "audioembed_url": "https://soundcloud.com/grappainc/sinatras-movenr137?",
         }
