@@ -15,9 +15,9 @@ dependencies = [
 #filer = ["django-filer"]
 #requests = ["requests"]
 
-[tool.setuptools.packages]
+[tool.setuptools]
 # Use automatic package discovery to include the root package and all subpackages
-find = { include = ["djangocms_baseplugins*"] }
+packages = { find = { include = ["djangocms_baseplugins*"] } }
 
 [tool.setuptools.dynamic]
 version = { attr = "djangocms_baseplugins.__version__" }
