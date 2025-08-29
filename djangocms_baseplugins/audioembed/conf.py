@@ -11,7 +11,7 @@ from djangocms_baseplugins.baseplugin.utils import (
 
 # basics
 NAME = _("Audio")
-MODULE = defaults.SPECIAL_LABEL
+MODULE = defaults.CONTENT_LABEL
 
 # parent / children
 ALLOW_CHILDREN = False
