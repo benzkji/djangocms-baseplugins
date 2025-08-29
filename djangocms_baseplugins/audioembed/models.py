@@ -1,5 +1,6 @@
 import requests
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 from djangocms_baseplugins.baseplugin.models import AbstractBasePlugin
 from djangocms_baseplugins.baseplugin.utils import check_migration_modules_needed
@@ -51,7 +52,10 @@ class AudioEmbedModelMixin(object):
 
 
 class AudioEmbed(AudioEmbedModelMixin, AbstractBasePlugin):
-    audioembed_url = models.URLField()
+    audioembed_url = models.URLField(
+        verbose_name=_("Embed URL"),
+        help_text=_("Supports spotify, soundcloud and mixcloud URLs"),
+    )
     color = models.CharField(
         max_length=32,
         default="",
