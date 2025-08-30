@@ -28,7 +28,7 @@ dependencies = [
 path = "djangocms_baseplugins/__init__.py"
 
 [tool.hatch.build]
-include = ["/djangocms_baseplugins" ]
+include = ["/djangocms_baseplugins"]
 
 
 [tool.ruff]
