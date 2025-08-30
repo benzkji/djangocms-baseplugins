@@ -1,6 +1,8 @@
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+#requires = ["setuptools>=61.0"]
+#build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
 name = "djangocms-baseplugins"
@@ -15,12 +17,18 @@ dependencies = [
 #filer = ["django-filer"]
 #requests = ["requests"]
 
-[tool.setuptools]
-# Use automatic package discovery to include the root package and all subpackages
-packages = { find = { include = ["djangocms_baseplugins*"] } }
+#[tool.setuptools]
+## Use automatic package discovery to include the root package and all subpackages
+#packages = { find = { include = ["djangocms_baseplugins*"] } }
+#
+#[tool.setuptools.dynamic]
+#version = { attr = "djangocms_baseplugins.__version__" }
 
-[tool.setuptools.dynamic]
-version = { attr = "djangocms_baseplugins.__version__" }
+[tool.hatch.version]
+path = "djangocms_baseplugins/__init__.py"
+
+[tool.hatch.build]
+include = ["/djangocms_baseplugins" ]
 
 
 [tool.ruff]
