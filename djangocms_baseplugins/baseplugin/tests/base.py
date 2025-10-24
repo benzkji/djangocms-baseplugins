@@ -262,7 +262,7 @@ class BasePluginTestCase(object):
                 exception_part = '"{}" in settings.MIGRATION_MODULES'.format(
                     plugin_module_name
                 )
-                self.assertEquals(True, exception_part in exception_message)
+                self.assertEqual(True, exception_part in exception_message)
 
     def test_form_choices_and_other_settings_respected(self):
         """
