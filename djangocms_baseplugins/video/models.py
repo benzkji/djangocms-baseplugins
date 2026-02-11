@@ -35,6 +35,7 @@ class VideoModelMixin(object):
         super().save()
 
     def populate_oembed_infos(self):
+        url = None
         if self.video_type == "youtube":
             url = "https://youtube.com/oembed/"
             params = {
@@ -46,9 +47,10 @@ class VideoModelMixin(object):
             params = {
                 "url": self.video_url,
             }
-        response = requests.get(url, params)
-        if response.status_code == 200:
-            self.oembed_info = response.json()
+        if url:
+            response = requests.get(url, params)
+            if response.status_code == 200:
+                self.oembed_info = response.json()
 
     def _set_base_infos(self):
         self._valid_url = False

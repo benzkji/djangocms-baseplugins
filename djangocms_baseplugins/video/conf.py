@@ -27,6 +27,9 @@ REGEXES = (
     re.compile(
         r"^https?\:\/\/(www\.)?youtube\.(com|nl|ru)\/embed\/(?P<youtube_id>[^\/]*)\??.*$"
     ),
+    re.compile(
+        r"^https?\:\/\/(www\.)?youtube\.(com|nl|ru)\/shorts\/(?P<youtube_id>[^\/]*)\??.*$"
+    ),
     re.compile(r"^https?\:\/\/(www\.)?vimeo\.com\/(?P<vimeo_id>[^\/]*)\??.*$"),
 )
 
