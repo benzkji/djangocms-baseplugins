@@ -4,7 +4,7 @@
 {% block plugin_content %}
 <div class="plugin {{ object.css_classes }} plugin_video {{ object.layout }} {{ object.background }} {{ object.color }}">
     <div class="plugin-video__video-container">
-        <iframe referrerpolicy="strict-origin-when-cross-origin" style="aspect-ratio: {{ object.aspect_ratio }}" src="{{ object.embed_url }}" {% if object.fullscreen %}allowfullscreen{% endif %} frameborder="0"></iframe>
+        <iframe referrerpolicy="strict-origin-when-cross-origin" style="{% if object.aspect_ratio %}aspect-ratio: {{ object.aspect_ratio|floatformat:"30u" }}{% endif %}" src="{{ object.embed_url }}" {% if object.fullscreen %}allowfullscreen{% endif %} frameborder="0"></iframe>
     </div>
 </div>
 {% endblock %}
